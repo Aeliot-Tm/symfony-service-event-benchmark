@@ -1,0 +1,11 @@
+* text eol=lf
+*.neon linguist-language=YAML
+
+/.docker        export-ignore
+/var            export-ignore
+/vendor         export-ignore
+/.editorconfig               export-ignore
+/.gitattributes              export-ignore
+/.gitignore                  export-ignore
+/compose.yaml                export-ignore
+/compose.override.yaml       export-ignore
