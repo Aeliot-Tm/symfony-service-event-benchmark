@@ -12,10 +12,8 @@ services:
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 
     _instanceof:
-        App\Service\ControllerBuilderInterface:
+        App\Service\ContentReaderInterface:
             tags: [ 'app.ControllerBuilder' ]
-        App\Service\StepBuilderInterface:
-            tags: [ 'app.ProjectStepBuilder' ]
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
@@ -26,3 +24,8 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\Controller\:
+        resource: '../src/Controller'
+        tags: [ 'controller.service_arguments' ]
+

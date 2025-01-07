@@ -1,5 +1,4 @@
 {
-    "name": "aeliot/symfony-service-event-benchmark",
     "type": "project",
     "license": "MIT",
     "autoload": {
@@ -28,17 +27,13 @@
     "prefer-stable": true,
     "require": {
         "php": ">=8.1",
-        "ext-ctype": "*",
-        "ext-iconv": "*",
-        "symfony/console": "6.4.*",
-        "symfony/dotenv": "6.4.*",
-        "symfony/filesystem": "6.4.*",
-        "symfony/finder": "6.4.*",
-        "symfony/flex": "^2",
-        "symfony/framework-bundle": "6.4.*",
-        "symfony/messenger": "6.4.*",
-        "symfony/runtime": "6.4.*",
-        "symfony/yaml": "6.4.*"
+        "../../vendor/symfony/console": "6.4.*",
+        "../../vendor/symfony/dotenv": "6.4.*",
+        "../../vendor/symfony/flex": "^2",
+        "../../vendor/symfony/framework-bundle": "6.4.*",
+        "../../vendor/symfony/messenger": "6.4.*",
+        "../../vendor/symfony/runtime": "6.4.*",
+        "../../vendor/symfony/yaml": "6.4.*"
     },
     "replace": {
         "symfony/polyfill-ctype": "*",

@@ -21,7 +21,7 @@ class ServiceBuilder implements ClassBuilderInterface
 
 namespace App\%s;
 
-class %s
+class %s implements ContentReaderInterface
 {
     public static function getKey(): string
     {
