@@ -31,13 +31,15 @@ class AwareConstantReader
         #[AutowireIterator('app.ConstantReader')]
         iterable $constantReaders,
     ) {
-        $this->constantReaders = $constantReaders instanceof \Traversable
-            ? iterator_to_array($constantReaders)
-            : $constantReaders;
+        $this->constantReaders = $constantReaders;
     }
 
     public function getContent(string $number): string
     {
+        if ($this->constantReaders instanceof \Traversable) {
+            $this->constantReaders = iterator_to_array($constantReaders)
+        }
+
         return $this->constantReaders[$number]->getContent($number);
     }
 }
