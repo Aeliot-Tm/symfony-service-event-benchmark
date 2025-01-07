@@ -28,7 +28,7 @@ class AwareConstantReader
     private array $constantReaders;
 
     public function __construct(
-        #[AutowireIterator('app.ConstantReader')]
+        #[AutowireIterator('app.ConstantReader', defaultIndexMethod: 'getKey')]
         iterable $constantReaders,
     ) {
         $this->constantReaders = $constantReaders;
